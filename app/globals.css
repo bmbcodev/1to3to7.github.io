@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #0a0a0a;
+  --color-gold: #ffd700;
+  --color-purple: #9f7aea;
+  --color-cyan: #22d3ee;
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-border: rgba(255, 215, 0, 0.15);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+body {
+  background-color: var(--color-bg);
+  color: white;
+  font-family: 'Syne', sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 215, 0, 0.2) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 215, 0, 0.2);
+  border-radius: 20px;
+}
+
+::selection {
+  background: rgba(255, 215, 0, 0.3);
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold via-yellow-300 to-gold bg-clip-text text-transparent;
+  }
+}
